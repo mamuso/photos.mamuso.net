@@ -41,14 +41,14 @@ const dataFolder = './data/export/';
           exposureBiasValue: Math.round(exif.exif.ExposureBiasValue * 10) / 10,
           exposureTime: `1/${Math.round(1 / exif.exif.ExposureTime)}`,
           GPSLatitude: (
-            exif.gps.GPSLatitude[0] +
-            exif.gps.GPSLatitude[1] / 60 +
-            exif.gps.GPSLatitude[2] / 3600
+            exif.gps?.GPSLatitude[0] +
+            exif.gps?.GPSLatitude[1] / 60 +
+            exif.gps?.GPSLatitude[2] / 3600
           ).toFixed(6),
           GPSLongitude: (
-            exif.gps.GPSLongitude[0] +
-            exif.gps.GPSLongitude[1] / 60 +
-            exif.gps.GPSLongitude[2] / 3600
+            exif.gps?.GPSLongitude[0] +
+            exif.gps?.GPSLongitude[1] / 60 +
+            exif.gps?.GPSLongitude[2] / 3600
           ).toFixed(6),
           width: exif.exif.PixelXDimension,
           height: exif.exif.PixelYDimension,
